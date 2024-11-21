@@ -31,7 +31,7 @@ export const NavSmall = () => {
           onClick={() => setNavOpen(false)}></i>
 
         <NavLink setNavOpen={setNavOpen} text="/ &nbsp;Home" path="/" iconClass="fa-sharp fa-solid fa-house" />
-        {/* <NavLink setNavOpen={setNavOpen} text="/ &nbsp;contact" path="/contact" iconClass="fa-sharp fa-solid fa-envelope" /> */}
+        <NavLink setNavOpen={setNavOpen} text="/ &nbsp;Dager" path="/dager" iconClass="fa-sharp fa-solid fa-house" />
       </div>
     </div>
     </>

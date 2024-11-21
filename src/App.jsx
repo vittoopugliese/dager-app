@@ -6,6 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import LumberPage from "./pages/LumberPage";
 import {OnPageLoad} from "./components/Shared/OnPageLoad";
+import { AboutPage } from "./pages/AboutPage";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -28,6 +29,7 @@ export default function App() {
             <Header data-aos="fade-down" />
             <Routes>
               <Route path="/" element={<MainPage />} />
+              <Route path="/dager" element={<AboutPage />} />
               <Route path="/lumberjvck" element={<LumberPage />} />
             </Routes>
           </div>

@@ -55,6 +55,8 @@ export const AboutPage = () => {
         />
       </div>
 
+      <p style={{marginTop: 30}}></p>
+
       <SectionTitle iconClass="fa-solid fa-layer-group" title="Mis Intereses" />
 
       <div className="more-projects-container">
@@ -66,7 +68,7 @@ export const AboutPage = () => {
       <p style={{marginTop: 44}}>
         Además de programar en C#, es un gran amante
         del heterofalocentrismo y practicante del mismo. También es un gran
-        jugador del clásico juego <b className="b">Lumberjack </b>, el cual está
+        jugador del clásico juego <b className="b">Lumberjack</b>, el cual está
         disponible haciendo{" "}
         <span
           onClick={game}

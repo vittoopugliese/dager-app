@@ -19,7 +19,7 @@ const miniProjects = [
     aos: 'fade-left'
   },
   {
-    title: "DSF Representations",
+    title: "DNS Server",
     description: "Servidor DNS desde cero, usando C#!.",
     link: "https://github.com/MarianoVilla/DNS-Server",
     tech: ["csharp"],

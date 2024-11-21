@@ -10,8 +10,9 @@ export const Profile = () => {
         <h1>🖐🏼 Dot Dager</h1>
         <p>Creador de contenido y programador Senior.</p>
         <p>
-          Amante de los gatos y los{" "}
-          <b style={{color: "#25a611"}}>🥒pepinazos</b> <span style={{top: -2, position: "relative"}}>👉🏼👌🏼</span>.
+          Amante de los{" "}
+          <b style={{color: "#25a611"}}>🥒pepinazos</b> <span style={{top: -2, position: "relative"}}>👉🏼👌🏼 </span>
+          y su filosofía.
         </p>
       </div>
     </div>

@@ -30,12 +30,12 @@ export const interests = [
   },
   {
     name: "Gatos",
-    description: "Amo a los gatos, tengo 2 y me gustaria tener mas.",
+    description: "Amo a los gatos, tengo 2 y me gustaria tener mas. Bebé y Bebel. Si pudiera, adoptaria a todos los gatos del mundo.",
     image: "interest2.png"
   },
   {
     name: "Guitarras",
-    description: "Tengo 3 guitarras, me gusta tocarlas y saborAprender nuevas canciones.",
+    description: "Tengo 3 guitarras, me gusta tocarlas y saborAprender nuevas canciones. Tambien me gusta tocar el teclado.",
     image: "interest3.png"
   },
   {
