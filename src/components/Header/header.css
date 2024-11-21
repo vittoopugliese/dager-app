@@ -1,0 +1,121 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 90px;
+  margin-top: 4px;
+  position: sticky;
+  left: 0px;
+  top: 0px;
+  z-index: 10000;
+  transition: var(--transition);
+  /* background-color: var(--dark1);  */
+  background-color: transparent;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5em;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.4em;
+  font-size: 1.4em;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.nav-item-br {
+  font-weight: 800 !important;
+  filter: drop-shadow(0px 0px 4px rgba(164, 164, 164, 0.64));
+}
+
+.theme-toggler {
+  cursor: pointer;
+}
+
+.theme-toggler img {
+  transition: var(--transition);
+  width: 1.74em;
+  position: relative;
+  top: 3px;
+  filter: contrast(0.74) drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.54));
+}
+
+.theme-toggler:hover img {
+  scale: 1.14;
+  filter: contrast(0.94) drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.64));
+}
+
+.nav-small-image {
+  width: 2.2em;
+  cursor: pointer;
+  transition: var(--transition);
+  background-color: var(--dark1);
+  border-radius: 100%;
+  padding: 2px;
+}
+
+.nav-small-image:hover {
+  scale: 1.05;
+}
+
+.navTogglerIcon {
+  font-size: 1.8em;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.navTogglerIcon:hover {
+  scale: 1.1;
+}
+
+.closeNavIcon {
+  font-size: 1.5em;
+  rotate: 180deg;
+  cursor: pointer;
+  transition: var(--transition);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 0.6em 0.6em 0em 0em;
+}
+
+.nav-small-background {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0000006c;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.items-container {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  transition: var(--transition);
+  gap: 0.8em;
+  font-size: 1.24em;
+  width: 225px;
+  height: 100vh;
+  background-color: #212121;
+  position: fixed;
+  top: 0px;
+  left: -20px;
+}
+
+.items-container .nav-item {
+  display: flex;
+  justify-content: left;
+  margin: 0em 1em;
+}

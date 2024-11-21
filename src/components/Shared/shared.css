@@ -1,0 +1,127 @@
+.section-title {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.section-title div {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1em;
+  margin: 2em 0em;
+}
+
+.section-title i {
+  font-size: 1.74em;
+}
+
+.page-load-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  text-align: center;
+  height: 100vh;
+  justify-content: center;
+}
+.page-load-content h1 {
+  font-size: 2em;
+  filter: drop-shadow(0px 0px 12px rgba(107, 107, 107, 0.54));
+}
+
+.loadem {
+  filter: drop-shadow(0px 0px 6px rgba(107, 107, 107, 0.24));
+}
+
+.button {
+  width: 12em;
+  height: 2.8em;
+  border-radius: 1em;
+  font-size: 1em;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: #fff5e0;
+  transition: var(--transition);
+}
+.button:hover {
+  scale: 1.06;
+  color: white;
+}
+
+.button::before {
+  content: "";
+  width: 0;
+  height: 3em;
+  border-radius: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: var(--gradient1);
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+  padding: 2em;
+  transition: var(--transition);
+}
+
+.button:hover::before {
+  width: 12em;
+}
+
+.email-button {
+  width: 100%;
+  height: 125px;
+  font-size: 1.8em;
+  color: var(--dark1);
+  border: none;
+  border-radius: 0.6em;
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition) !important;
+}
+
+.email-button p {
+  color: white;
+}
+
+.email-button i {
+  color: white;
+}
+.email-button:hover {
+  scale: 1.04;
+}
+
+.socials-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1.6em;
+  margin-left: 0.2em;
+  margin: 1em 0em;
+}
+.social {
+  display: flex;
+  gap: 0.6em;
+  align-items: center;
+  border: 2px solid var(--dark2);
+  padding: 0.9em 1.2em;
+  border-radius: 1.2em;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.social:hover{
+  scale: 1.04;
+}
+.social p {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.social i {
+  font-size: 1.8em;
+}
