@@ -4,6 +4,8 @@
   flex-direction: column;
   width: 100%;
   margin: 1em 0em;
+  position: relative;
+  margin-top: 80px;
 }
 
 .profile-picture {
@@ -25,9 +27,10 @@
 
 .profile-data {
   display: flex;
-  align-items: left;
+  align-items: center;
   flex-direction: column;
   text-align: center;
+  margin-top: 20px
 }
 
 .profile-data p {
@@ -89,4 +92,15 @@
   left: 0px;
   opacity: 0;
   transition: var(--transition);
+}
+
+.profileh1{
+  background-image: var(--gradient0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  text-align: center;
+  padding: 0em 0.54em;
+  border-radius: 4px;
 }

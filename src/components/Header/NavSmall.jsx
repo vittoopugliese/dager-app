@@ -30,8 +30,8 @@ export const NavSmall = () => {
         <i className="fa-solid fa-arrow-right closeNavIcon"
           onClick={() => setNavOpen(false)}></i>
 
-        <NavLink setNavOpen={setNavOpen} text="/ &nbsp;Home" path="/" iconClass="fa-sharp fa-solid fa-house" />
-        <NavLink setNavOpen={setNavOpen} text="/ &nbsp;Dager" path="/dager" iconClass="fa-sharp fa-solid fa-house" />
+        <NavLink setNavOpen={setNavOpen} text="&nbsp;Home" path="/" iconClass="fa-sharp fa-solid fa-house" />
+        <NavLink setNavOpen={setNavOpen} text="&nbsp;Dager" path="/dager" iconClass="fa-sharp fa-solid fa-person" />
       </div>
     </div>
     </>

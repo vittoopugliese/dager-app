@@ -6,7 +6,7 @@ export const ProjectTechIcons = ({project, miniBox}) => {
       {project.tech.map((t, i) => {
         return (
           <img
-            src={`./tech-logos/${t}.png`}
+            src={`./${t}.png`}
             loading="lazy"
             draggable={false}
             alt={t}
@@ -16,7 +16,7 @@ export const ProjectTechIcons = ({project, miniBox}) => {
               position: "relative",
               fontSize: t == "angular" ? "1.4em" : "1em",
               bottom: t == "angular" ? "1px" : "0px",
-              width: "1.94em"
+              width: "1.04em"
             }}
             className={t}
           />

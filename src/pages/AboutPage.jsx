@@ -5,6 +5,7 @@ import Socials from "../components/About/Socials";
 import {useNavigate} from "react-router-dom";
 import { interests } from "../utils/constants";
 import InterestBox from "../components/InterestBox";
+import { useGlobalContext } from "../contexts/GlobalContextProvider";
 
 function openLink() {
   window.open("https://www.youtube.com/@DotDager");
@@ -12,6 +13,7 @@ function openLink() {
 
 export const AboutPage = () => {
   const [currentImage, setCurrentImage] = useState(1);
+  const {setModoBananero} = useGlobalContext();
   const navigate = useNavigate();
 
   const game = () => {
@@ -25,23 +27,28 @@ export const AboutPage = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentImage((prev) => (prev === 1 ? 2 : 1));
-    }, 254);
+    }, 454);
 
     return () => clearInterval(intervalId);
   }, []);
+
+  const handleBananeroMode = () => {
+    setModoBananero(true);
+    navigate("/");
+  };
 
   return (
     <section className="about-section-container">
       <SectionTitle iconClass="fa-solid fa-layer-group" title="Sobre Mi" />
       <p>
-        <b className="b">Mariano</b> es un desarrollador de software con más de
-        8 años de experiencia en el desarrollo de aplicaciones usando diversas
+        <b className="b">Mariano</b> es un desarrollador de software con
+        <b className="b"> más de 8 años de experiencia </b> en el desarrollo de aplicaciones usando diversas
         tecnologias. Actualmente trabajando en su propio canal de
         <b style={{color: "#f84646", cursor: "pointer"}} onClick={openLink}>
           {" "}
           YouTube{" "}
         </b>
-        y paralelamente haciendo freelancing.
+        y paralelamente haciendo freelancing, se caracteriza por su <b className="b">seriedad</b> al afrontar nuevos proyectos y desafios.
       </p>
 
       <div className="dagers-container">
@@ -65,9 +72,9 @@ export const AboutPage = () => {
           })}
         </div>
 
-      <p style={{marginTop: 44}}>
-        Además de programar en C#, es un gran amante
-        del heterofalocentrismo y practicante del mismo. También es un gran
+      <p style={{marginTop: 84}}>
+        Además de programar en C# como actividad principal, es un gran amante y practicante
+        del <b className="b">  heterofalocentrismo</b>. También es un gran
         jugador del clásico juego <b className="b">Lumberjack</b>, el cual está
         disponible haciendo{" "}
         <span
@@ -79,14 +86,34 @@ export const AboutPage = () => {
           }}>
           clic aquí
         </span>{" "}
-        o en el icono del juego en la barra de navegación. Para más información
-        sobre el catador fálico, puedes visitar su canal y sus demás redes
+        o en el icono del juego en la barra de navegación. <br /> Para más información
+        sobre el catador fálico, puedes visitar su canal y demás redes
         sociales.
       </p>
 
-      <div style={{height: "50px"}}></div>
+      <div style={{height: "90px"}}></div>
+
       <Socials />
-      <div style={{height: "500px"}}></div>
+
+      <div style={{height: "300px"}}></div>
+
+      <p style={{textAlign: "center"}}>🥒 Hecho con amor por 
+        <a href="https://www.linkedin.com/in/vittoopugliese/" target="_blank">
+          <b style={{color: "white"}}> Vittorio </b>
+        </a> 
+        💘 !
+      </p>
+
+      <p style={{textAlign: "center", marginTop: 20}}>Ya que leiste hasta aca, activate el 
+        <a style={{cursor: "pointer"}} onClick={handleBananeroMode} target="_blank">
+          <b style={{color: "white"}}> MODO BANANERO </b>
+        </a> 
+        🍌
+        <br />
+        (se desactiva en el header)
+      </p>
+
+      <div style={{height: "100px"}}></div>
     </section>
   );
 };

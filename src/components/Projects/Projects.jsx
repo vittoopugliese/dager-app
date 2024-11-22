@@ -2,34 +2,28 @@ import React from "react";
 import {ProjectBox} from "./ProjectBox";
 import './projects.css'
 import { SectionTitle } from './../Shared/SectionTitle';
-
-const projects = [
-  {
-    title: "GPTherapist",
-    description: "Project Under Maintenance. Talk about your problems with an GPT-based therapist trained with experienced psycologist data. App interactions costs credits.",
-    image: "./project-images/image1.png",
-    tech: ['react', 'javascript', 'openai'],
-    link: 'https://vittoopugliese.github.io/gptherapist/'
-  },
-  {
-    title: "NFTorio",
-    description: "Digital market. Watch, listen and buy my personal list of images and music NFT's. Integrated Crypto payments. Includes a built-in music player made with vanilla JS.",
-    image: "./project-images/image2.png",
-    tech: ['html', 'css', 'javascript'],
-    link: 'https://vittoopugliese.github.io/NFTorio/'
-  },
-];
+import { projects } from "../../utils/constants";
 
 export const Projects = () => {
   return (
     <section className="projects-section-container">
       <SectionTitle iconClass='fa-solid fa-layer-group' 
-      title='Main Projects' />
+      title='Últimos videos' />
 
       <div className="projects-container">
         {projects.map((project) => {
           return <ProjectBox project={project} key={project.title} />;
         })}
+
+        <a href="https://www.youtube.com/@DotDager" target="_blank" style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          color: "#f9f9f9",
+          textDecoration: "underline",
+          fontSize: "1.2em",
+          marginTop: "1em",
+        }}>Ver mas</a>
       </div>
     </section>
   );

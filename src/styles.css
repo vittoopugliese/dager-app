@@ -10,11 +10,12 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   --dark1: #141414;
-  --dark2: #282828;
-  --primary: #ffe095;
+  --dark2: #202020;
+  --primary: #ff9595;
   --transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
   --transition2: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
   --icon-drop: drop-shadow(2px 2px 1px rgba(100, 100, 100, 0.64));
+  --gradient0: linear-gradient(to right, var(--dark1) 20%, #292929 100%);
   --gradient1: linear-gradient(to right, var(--dark1) -60%, #fff5e0 100%);
   --gradient2: linear-gradient(220.55deg, #ffc23d 0%, #eed59f 100%);
   --gradient3: linear-gradient(220.55deg, #ffd439 0%, #ff7a00 100%);
@@ -28,6 +29,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  letter-spacing: 0.2px;
 }
 
 html {
@@ -128,10 +130,6 @@ hr {
     font-size: 1.2em;
   }
 
-  .projects-container {
-    gap: 3em;
-  }
-
   .more-projects-container {
     grid-template-columns: 1fr;
   }
@@ -201,23 +199,6 @@ hr {
   align-items: center;
 }
 
-.socials-container {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  column-gap: 4em;
-  margin-left: 0.2em;
-  margin: 1em auto;
-  justify-content: space-between;
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .lumber-container {
   display: flex;
   justify-content: center;
@@ -258,6 +239,7 @@ hr {
 }
 
 .interest-overlay {
+  transition: all 254ms ease;
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -291,9 +273,53 @@ hr {
 }
 
 .interest-card:hover .interest-overlay {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.8) 100%
-  );
+  opacity: 0.8;
+}
+
+.background-image {
+  position: absolute;
+  width: 200vw;
+  height: 670px;
+  background-image: url('./fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  z-index: 0;
+  transform: translate(-25%, 0);
+}
+
+.background-image-2 {
+  background-image: url('./pepinos.png');
+  filter: saturate(2.2) brightness(1.2);
+}
+
+@media (max-width: 1954px) {
+  .background-image  {
+    width: 120vw;
+  }
+}
+
+@media (max-width: 824px) {
+  .background-image  {
+    height: 632px;
+    transform: translate(-20%, 0);
+  }
+}
+
+@media (max-width: 498px) {
+  .background-image  {
+    height: 624px;
+  }
+}
+
+@media (max-width: 484px) {
+  .background-image  {
+    height: 692px;
+  }
+}
+@media (max-width: 292px) {
+  .background-image  {
+    height: 796px;
+  }
 }

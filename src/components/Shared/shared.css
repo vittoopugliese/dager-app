@@ -104,7 +104,22 @@
   gap: 1.6em;
   margin-left: 0.2em;
   margin: 1em 0em;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 4em;
+  margin-left: 0.2em;
+  margin: 1em auto;
+  justify-content: space-between;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
+
 .social {
   display: flex;
   gap: 0.6em;
