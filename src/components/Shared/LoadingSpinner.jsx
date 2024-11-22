@@ -1,3 +1,4 @@
+import avatar from "./../../assets/avatar.png";
 export const LoadingSpinner = ({size}) => {
   return (
     <img
@@ -5,7 +6,7 @@ export const LoadingSpinner = ({size}) => {
       draggable="false"
       className="loading-spinner"
       style={{width: `${size}em`, height: `${size}em`, borderRadius: "100%"}}
-      src="./avatar.png"
+      src={avatar}
     />
   );
 };

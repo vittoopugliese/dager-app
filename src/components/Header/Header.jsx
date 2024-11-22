@@ -4,6 +4,8 @@ import {useMedia} from "./../../hooks/useMedia";
 import {useNavigate, useLocation} from "react-router-dom";
 import "./header.css";
 import {useGlobalContext} from "../../contexts/GlobalContextProvider";
+import bana from "../../assets/bananero.png";
+import lumber from "../../assets/lumber.png";
 
 export const Header = () => {
   const {isMobile} = useMedia(620);
@@ -33,7 +35,7 @@ export const Header = () => {
           }}>
           {modoBananero && (
             <img
-              src="./bananero.png"
+              src={bana}
               onClick={toggleModoBananero}
               alt="lumber"
               draggable={false}
@@ -42,7 +44,7 @@ export const Header = () => {
           )}
 
           <img
-            src="./lumber.png"
+            src={lumber}
             onClick={() => navigate("/lumberjvck")}
             alt="lumber"
             draggable={false}

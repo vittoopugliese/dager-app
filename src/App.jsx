@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import LumberPage from "./pages/LumberPage";
 import {OnPageLoad} from "./components/Shared/OnPageLoad";
-import { AboutPage } from "./pages/AboutPage";
+import {AboutPage} from "./pages/AboutPage";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -15,16 +15,17 @@ export default function App() {
     AOS.init();
   }, []);
 
-  setTimeout(() => {
-    setLoading(false);
-  }, 1500);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
       {loading ? (
         <OnPageLoad />
       ) : (
-        <BrowserRouter>
+        <BrowserRouter basename="/dager-app">
           <div className="appContainer" data-aos="fade-up">
             <Header data-aos="fade-down" />
             <Routes>

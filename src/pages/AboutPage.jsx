@@ -6,6 +6,8 @@ import {useNavigate} from "react-router-dom";
 import { interests } from "../utils/constants";
 import InterestBox from "../components/InterestBox";
 import { useGlobalContext } from "../contexts/GlobalContextProvider";
+import pan1 from "../assets/pan1.jpg";
+import pan2 from "../assets/pan2.jpg";
 
 function openLink() {
   window.open("https://www.youtube.com/@DotDager");
@@ -53,7 +55,7 @@ export const AboutPage = () => {
 
       <div className="dagers-container">
         <img
-          src={currentImage === 1 ? "./pan1.jpg" : "./pan2.jpg"}
+          src={currentImage === 1 ? pan1 : pan2}
           width="300px"
           style={{
             opacity: 1,

@@ -22,7 +22,6 @@ export const ProjectBox = ({project}) => {
 
         <p>{project.description}</p>
 
-        {!isMobile && <hr />}
       </div>
     </div>
   );

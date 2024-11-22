@@ -8,7 +8,8 @@ export const Profile = () => {
 
   return (
     <div className="profile-container">
-      <ThreeDee />
+      {/* <ThreeDee /> */}
+      <div style={{marginTop:400}}></div>
       <div className="profile-data">
         <div className="profileh1">
           {modoBananero ? <h1>🖐🏼 BOT Dager</h1> : <h1>🖐🏼 Dot Dager</h1>}
