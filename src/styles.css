@@ -311,6 +311,20 @@ hr {
   .background-image  {
     height: 624px;
   }
+
+  .three-container{
+    margin-top: 54px;
+  }
+}
+
+@media (max-width: 498px) {
+  .background-image  {
+    height: 624px;
+  }
+
+  .three-container{
+    margin-top: 24px;
+  }
 }
 
 @media (max-width: 484px) {

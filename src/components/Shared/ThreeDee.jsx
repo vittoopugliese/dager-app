@@ -3,10 +3,8 @@ import * as THREE from "three";
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { gsap } from "gsap";
-import pickleTexture from '../../assets/pickle.png';
-import pickleModel from '../../assets/pickle.obj?url';
 
-export const ThreeDee = () => {
+export const ThreeDee = ({modelParam, textureParam, isInterest, isPingo}) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -16,8 +14,8 @@ export const ThreeDee = () => {
     const scene = new THREE.Scene();
 
     const sizes = {
-      width: window.innerWidth / divide,
-      height: 400,
+      width: isInterest ? 82 : window.innerWidth / divide,
+      height: isInterest ? 82 : 400,
     };
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
@@ -32,7 +30,7 @@ export const ThreeDee = () => {
     scene.add(fillLight);
 
     const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 100);
-    camera.position.z = 3;
+    camera.position.z = isPingo ? 1 : 3;
     scene.add(camera);
 
     const renderer = new THREE.WebGLRenderer({canvas: canvasRef.current, alpha: true, antialias: true});
@@ -46,14 +44,14 @@ export const ThreeDee = () => {
     controls.enablePan = false;
     controls.enableZoom = true;
     controls.autoRotate = true;
-    controls.autoRotateSpeed = 5;
+    controls.autoRotateSpeed = isPingo ? 100 : 5;
 
     const textureLoader = new THREE.TextureLoader();
     const objLoader = new OBJLoader();
 
-    const texture = textureLoader.load(pickleTexture);
+    const texture = textureLoader.load(textureParam);
 
-    objLoader.load(pickleModel, (object) => {
+    objLoader.load(modelParam, (object) => {
       object.rotation.x = Math.PI / 4;
 
       const material = new THREE.MeshStandardMaterial({ 
@@ -104,8 +102,8 @@ export const ThreeDee = () => {
 
     const handleResize = () => {
       divide = window.innerWidth < 474 ? 1.14 : 1.84;
-      sizes.width = window.innerWidth / divide;
-      sizes.height = 400;
+      sizes.width = isInterest ? 82 : window.innerWidth / divide;
+      sizes.height = isInterest ? 82 : 400;
       camera.aspect = sizes.width / sizes.height;
       camera.updateProjectionMatrix();
       renderer.setSize(sizes.width, sizes.height);
@@ -118,10 +116,10 @@ export const ThreeDee = () => {
       window.removeEventListener("resize", handleResize);
       window.cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [isInterest, isPingo, modelParam, textureParam]);
 
   return (
-    <div className="three-container">
+    <div className={"three-container" + isPingo && " saturate"}>
       <canvas ref={canvasRef} className="webgl" />
     </div>
   );
