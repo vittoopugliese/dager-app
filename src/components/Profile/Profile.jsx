@@ -21,7 +21,7 @@ export const Profile = () => {
 
       <div className="profile-data">
         <div className="profileh1">
-          {modoBananero ? <h1>🖐🏼 BOT Dager</h1> : <h1>🖐🏼 Dot Dager</h1>}
+          {modoBananero ? <h1>🖐🏼 GuachoPaja92</h1> : <h1>🖐🏼 Dot Dager</h1>}
         </div>
         {modoBananero 
         ? <p>SOY DAGER Y ME ENCANTA EL BANANO 🍌</p>
